@@ -1,17 +1,28 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
+using Photon.Pun;
 
-public class Launcher : MonoBehaviour
+public class Launcher : MonoBehaviourPunCallbacks
 {
-    // Start is called before the first frame update
-    void Start()
+    [Header("輸出文字")]
+    public Text textPrint;
+
+    public InputField playerIF;
+    public InputField roomCreateIF;
+    public InputField roomJoinIF;
+
+    public string namePlayer, nameCreateRoom, nameJoinRoom;
+
+    public string NamePlayer { get => namePlayer; set => namePlayer=value; }
+    public string NameCreateRoom { get => nameCreateRoom; set => nameCreateRoom = value; }
+    public string NameJoinRoom { get => nameJoinRoom; set => nameJoinRoom = value; }
+
+    private void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Connect()
     {
         
     }
