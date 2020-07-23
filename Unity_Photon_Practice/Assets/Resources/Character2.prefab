@@ -205,6 +205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pv: {fileID: 975567289366573563}
   character: {fileID: 8223663471056770143}
+  positionNext: {x: 0, y: 0, z: 0}
 --- !u!114 &975567289366573563
 MonoBehaviour:
   m_ObjectHideFlags: 0

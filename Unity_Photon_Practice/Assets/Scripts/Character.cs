@@ -8,6 +8,7 @@ public class Character : MonoBehaviourPun, IPunObservable
     public PhotonView pv;
     public Character character;
 
+    public Vector3 positionNext;
 
     void Start()
     {
@@ -20,14 +21,22 @@ public class Character : MonoBehaviourPun, IPunObservable
     // Update is called once per frame
     void Update()
     {
-        
+        /*if (pv.IsMine)
+        {
+
+        }*/
     }
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
-        /*if (stream.IsWriting)
+        if (stream.IsWriting)
         {
-            stream.SendNext()
-        }*/
+            stream.SendNext(transform.position);
+            stream.SendNext(transform.rotation);
+        }
+        else if (stream.IsReading)
+        {
+            positionNext = (Vector3)stream.ReceiveNext();
+        }
     }
 }

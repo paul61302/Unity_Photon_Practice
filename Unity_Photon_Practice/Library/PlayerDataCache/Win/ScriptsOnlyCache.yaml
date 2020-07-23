@@ -22,8 +22,6 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.PunBasics.PlayerUI
     - Photon.Pun.Demo.SlotRacer.PlayerControl
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
-    PhotonUnityNetworking.Editor.dll:
-    - Photon.Pun.PhotonViewInspector
     PhotonUnityNetworking.Utilities.dll:
     - Photon.Pun.UtilityScripts.MoveByKeys
     PhotonUnityNetworking.dll:
@@ -232,6 +230,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11190}
     - Class: 114
       Script: {instanceID: 11192}
+    - Class: 114
+      Script: {instanceID: 11194}
     - Class: 114
       Script: {instanceID: 11502}
     - Class: 114
@@ -879,7 +879,7 @@ ScriptsOnlyBuild:
     className: ChangeName
   - hash:
       serializedVersion: 2
-      Hash: 11fe28b4667eb3666a8ec9259997b5b0
+      Hash: 18686f4ef21691799403a51e0985e0f0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Character
@@ -1503,7 +1503,7 @@ ScriptsOnlyBuild:
     className: PhotonTransformViewClassic
   - hash:
       serializedVersion: 2
-      Hash: f111fa68ce54bb055a5ade98eee0a437
+      Hash: 59befc6e524daf5327284890d1e4ee8f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
