@@ -879,7 +879,7 @@ ScriptsOnlyBuild:
     className: ChangeName
   - hash:
       serializedVersion: 2
-      Hash: 18686f4ef21691799403a51e0985e0f0
+      Hash: 686176f25edadb7a1aae02e879dca96c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Character
@@ -1503,7 +1503,7 @@ ScriptsOnlyBuild:
     className: PhotonTransformViewClassic
   - hash:
       serializedVersion: 2
-      Hash: 59befc6e524daf5327284890d1e4ee8f
+      Hash: b8e0781988b4c62cb544b938a56f9b0d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager

@@ -204,8 +204,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: {fileID: -6250909413652596882}
-  character: {fileID: 8994046233633800300}
   positionNext: {x: 0, y: 0, z: 0}
+  Glasses:
+  - {fileID: 21300000, guid: 90890dfffebd7ee4286ebcd6b258ab31, type: 3}
+  - {fileID: 21300000, guid: 2b6ed2a36cdc7ba469c4ac80c0b9c5c2, type: 3}
+  - {fileID: 21300000, guid: e0cbf784791895e458cac9aa475f9152, type: 3}
+  - {fileID: 21300000, guid: 6e7836b30ef2ecf49a7167780e95130d, type: 3}
+  - {fileID: 21300000, guid: 63f8402f85cedc749bba17e2d82e4726, type: 3}
+  - {fileID: 21300000, guid: a88847a32ffd46a458267977086864f6, type: 3}
+  - {fileID: 21300000, guid: 0b2864e6979ab684ab371529ccf456f2, type: 3}
+  NewGlasses: {fileID: 301137483773919197}
 --- !u!114 &-6250909413652596882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,7 +228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObservedComponentsFoldoutOpen: 1
   Group: 0
-  prefixField: -1
+  prefixField: 0
   Synchronization: 3
   OwnershipTransfer: 0
   ObservedComponents:

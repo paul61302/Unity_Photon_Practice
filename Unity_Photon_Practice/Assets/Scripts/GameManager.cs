@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
+using Photon.Realtime;
+using ExitGames.Client.Photon;
 
-public class GameManager : MonoBehaviour
+public class GameManager : MonoBehaviourPunCallbacks, IOnEventCallback
 {
     [Header("玩家預置物")]
     public GameObject prefabPlayer1;
@@ -12,8 +14,6 @@ public class GameManager : MonoBehaviour
 
     public GameObject canvas;
 
-    public Sprite[] Glasses;
-    
 
     /// <summary>
     /// 生成玩家物件
@@ -26,16 +26,22 @@ public class GameManager : MonoBehaviour
             GameObject Player1 = PhotonNetwork.Instantiate(prefabPlayer1.name, Vector3.zero, Quaternion.Euler(0,180,0));
             Player1.transform.parent = canvas.transform;
             Player1.transform.localPosition = player1Position;
-            print(player1Position);
+            Player1.transform.localScale = new Vector3(3, 3, 3);
         }
         else if(PlayersInRoom == 1)
         {
             GameObject Player2 = PhotonNetwork.Instantiate(prefabPlayer1.name, Vector3.zero, Quaternion.identity);
             Player2.transform.parent = canvas.transform;
             Player2.transform.localPosition = player2Position;
+            Player2.transform.localScale = new Vector3(3, 3, 3);
         }
         
     }
+
+    /*public void WearGlasses(int index)
+    {
+        prefabPlayer1.GetComponent<Property>().ChGlasses(index);
+    }*/
 
     private void Start()
     {
@@ -43,10 +49,21 @@ public class GameManager : MonoBehaviour
         //ChangeGlasses();
     }
 
-    public void ChangeGlasses(int i)
-    {        
-        GameObject Character1 = canvas.transform.GetChild(6).gameObject;
-        GameObject glasses = Character1.transform.GetChild(5).gameObject;
-        glasses.GetComponent<Image>().sprite = Glasses[i];
+    public void OnEvent(EventData photonEvent)
+    {
+        
+    }
+
+    public override void OnEnable()
+
+    {
+        base.OnEnable();
+        PhotonNetwork.AddCallbackTarget(this);
+    }
+
+    public override void OnDisable()
+    {
+        base.OnDisable();
+        PhotonNetwork.RemoveCallbackTarget(this);
     }
 }
